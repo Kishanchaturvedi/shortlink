@@ -1,0 +1,115 @@
+.hw-35 {
+    height: 35px;
+    width: 35px;
+    /* object-fit: cover; */
+}
+
+.btn-overlay {
+    border: 1.5px solid #3419AB;
+    color: #3419AB;
+    background: transparent;
+}
+
+.btn-overlay:hover {
+    border: 1.5px solid #3419AB;
+    color: white;
+    background: #3419AB;
+    transition: .6s;
+}
+
+.faviconLogo{
+    cursor: pointer;
+}
+
+/* element.style {
+} */
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    outline: 0;
+    box-shadow: none;
+    border-color: none !important;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #3419AB;
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    background-color: #3419AB;
+    border-color: #3419AB;
+}
+
+.nav-link:focus,
+.nav-link {
+    color: #3419AB;
+}
+
+button .nav-link:focus {
+    color: #3419AB !important;
+}
+
+.input-dashed {
+    border: 1px dashed #3419AB;
+    height: 70px;
+}
+/* .pl-16px{
+    padding-left: 16rem;
+} */
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+/* dashbord  */
+.sidenav-bar {
+    width: 16rem ;
+    transition: .5s;
+    margin-top: 20px;
+    /* height: 100vh; */
+}
+/* .w-16{
+    width: 16rem;
+} */
+.phoneSide-bar{
+    width: 5rem;
+    transition: .5s;
+}
+.transition-5{
+    transition: .5s;
+}
+
+.pl-16rem {
+    padding-left: 16rem;
+    transition: .5s;
+}
+.pl-5rem {
+    padding-left: 5rem;
+    transition: .5s;
+}
+.btn-circle {
+    height: 35px;
+    width: 35px;border-radius: 100%;
+    border: none;
+    right: -15px;
+}
+/* .toggle-display{
+
+} */
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    /* .w-16{
+        width: 5rem;
+    }
+    .pl-16px{
+        padding-left: 5rem;
+    }
+    .toggle-display{
+        display: none;
+    } */
+ }

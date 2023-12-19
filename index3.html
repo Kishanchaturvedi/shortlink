@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashborad</title>
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- icon link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Poppins fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body class="bg-light">
+
+    <nav
+        class="d-flex  justify-content-between align-items-center bg-white shadow-sm px-5 py-3 position-fixed top-0 start-0 end-0">
+        <a href="/" class="nav-link">
+            <h2 class=" text-blue ">Logo</h2>
+        </a>
+        <div class="d-lg-flex align-items-center gap-5 d-none">
+            <!-- <button class="text-capitalize px-4 py-2 btn-overlay rounded">upgrade</button> -->
+            <!-- <button class="text-capitalize px-4 py-2 btn-overlay rounded">upgrade</button> -->
+            <li class="nav-link"><a href="login.html" class="nav-link text-uppercase">New link</a></li>
+            <li class="nav-link"><a href="login.html" class="nav-link text-uppercase"><span
+                        class="text-uppercase">qr</span> code</a></li>
+            <li class="nav-link"><a href="login.html" class="nav-link text-uppercase"><i
+                        class="bi bi-bell-fill fs-4 text-secondary"></i></a></li>
+            <li class="nav-link"><a href="" class="nav-link text-uppercase hw-35"><img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww"
+                        alt="" class="img-cover rounded-circle"></a></li>
+        </div>
+        <button class="d-lg-none d-block border-0 bg-transparent"><i class="bi bi-list fs-3"></i></button>
+        <!-- <div class="d-none">
+            <button class="text-capitalize bg-blue text-white border-0 px-4 py-2 rounded">upgrade</button>
+            <li class="nav-link"><a href="login.html" class="nav-link text-uppercase"><i
+                        class="bi bi-bell-fill"></i></a></li>
+            <li class="nav-link"><a href="" class="nav-link text-uppercase hw-35"><img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMGltYWdlfGVufDB8fDB8fHww"
+                        alt="" class="img-cover"></a></li>
+        </div> -->
+    </nav>
+    <!-- <div class="d-flex"> -->
+    <div class="position-relative ">
+        <div class="d-flex flex-column gap-4 sidenav-bar position-fixed bg-white shadow-sm pt-4 mt-3 h-100"
+            id="sideNav">
+            <button class=" position-absolute btn-circle" id="sideBtn" onclick="sideBtn()"><i
+                    class="bi bi-chevron-right text-blue fw-bold fs-5"></i></button>
+            <!-- <li class="nav-link">
+                <a href="" class="text-capitalize nav-link d-flex align-items-center fs-1 ps-5">logo</a>
+            </li> -->
+            <li class="nav-link">
+                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon"><i
+                            class="bi bi-grid fs-4 p-4"></i></span><span class="toggle-display">dashbord</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="index2.html" class="text-capitalize nav-link d-flex align-items-center"><span
+                        class="side-icon"><i class="bi bi-link fs-4 p-4"></i></span><span class="toggle-display">new
+                        link</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon"><i
+                            class="bi bi-qr-code fs-4 p-4"></i></span><span class="toggle-display">qr code</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon "><i
+                            class="bi bi-table fs-4 p-4"></i></span><span class="toggle-display">table</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon"><i
+                            class="bi bi-calendar2-plus fs-4 p-4"></i></span><span
+                        class="toggle-display">calender</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon"><i
+                            class="bi bi-geo-alt fs-4 p-4"></i></span><span class="toggle-display">maps</span>
+                </a>
+            </li>
+        </div>
+    </div>
+    <div class="pl-16rem pt-5 mt-5 " id="sideSpace">
+        <div class="container-fluid d-flex justify-content-center align-items-center ">
+            <div class="col-lg-10 px-lg-5 px-2 py-5 rounded-lg-5 rounded-4 bg-white">
+                <form action="" onsubmit="return logoValidation()">
+                    <div class="">
+                        <div class="">
+                            <div class="mb-3">
+                                <label for="url" class="form-label text-capitalize">destination</label>
+                                <input type="text" class="form-control" id="url"
+                                    placeholder="Type or paste a link (URL)">
+                                <p class="fs-10 text-danger text-capitalize position-absolute" id="urlErrors"> </p>
+
+                            </div>
+                            <div class="d-md-flex  align-items-center">
+                                <div class="mb-3 col-md-6 pe-2">
+                                    <label for="short-url" class="form-label text-capitalize">background image</label>
+                                    <input type="file" class="form-control" id="bgImgFavicon">
+                                    <p class="fs-10 text-danger text-capitalize position-absolute" id="bgImgErrors">
+                                    </p>
+                                </div>
+                                <div class="mb-3 ps-2 ">
+                                    <label for="titles" class="form-label text-capitalize"> color
+                                    </label>
+                                    <input type="color" class="form-control" id="titles">
+                                    <!-- <p class="fs-10 text-danger text-capitalize position-absolute" id="colorErrors">kjdslfsdlfkdflk </p> -->
+                                </div>
+                            </div>
+                            <!-- <div class=" mb-3">
+                                <label for="floatingTextarea">Description</label>
+                                <textarea class="form-control" id="floatingTextarea"></textarea>
+                            </div> -->
+                            <div class=" d-flex flex-column">
+                                <label for="logo">Logo</label>
+                                <div class="position-relative d-flex justify-content-center align-items-center">
+                                    <div class="input-dashed rounded-3 w-100">
+                                        <input type="file" id="logo"
+                                            class="faviconLogo position-absolute h-100 w-100 opacity-0">
+                                        <div class="d-flex justify-content-center align-items-center flex-column">
+                                            <i class="bi bi-upload fs-4"></i>
+                                            <p class="m-0 text-capitalize">upload icon image</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="fs-10 text-danger text-capitalize" id="logoError"></p>
+                            <button type="submit" class="bg-blue px-4 py-2 border-0 rounded text-white">Create
+                                QR code</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- </div> -->
+
+    <script>
+        document.getElementById('bgImgFavicon').addEventListener('change', function () {
+            const file = this.files[0]; // Get the selected file
+
+            if (file) {
+                const fileSizes = file.size; // Size of the file in bytes
+                const maxSizeInByte = 500 * 1024; // 500KB in bytes
+
+                if (fileSizes > maxSizeInByte) {
+                    alert('Please select a file smaller than 500KB.'); // Display an alert or handle the validation error
+                    this.value = ''; // Clear the file input
+                    return false; // Prevent further processing if the file size exceeds the limit
+                }
+            }
+        });
+
+
+
+        document.getElementById('logo').addEventListener('change', function () {
+            const file = this.files[0]; // Get the selected file
+
+            if (file) {
+                const fileSizes = file.size; // Size of the file in bytes
+                const maxSizeInByte = 100 * 1024; // 100KB in bytes
+
+                if (fileSizes > maxSizeInByte) {
+                    alert('Please select a file smaller than 100KB.'); // Display an alert or handle the validation error
+                    this.value = ''; // Clear the file input
+                    return false; // Prevent further processing if the file size exceeds the limit
+                }
+            }
+        });
+    </script>
+
+
+
+
+    <script src="/js/validation.js"></script>
+    <script src="js/js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

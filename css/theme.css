@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-blue {
+    color: #3419AB !important;
+}
+
+.img-cover {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bg-blue {
+    background-color: #3419AB;
+}
+
+.bg-orange {
+    background: #DB4437;
+}
+
+.bg-fb {
+    background-color: #4267B2;
+}
+
+.border-line {
+    width: 100%;
+    height: 1px;
+    background: #444444;
+}
+
+.outline-blue {
+    outline-style: 1px solid;
+    outline-width: thin;
+    outline-color: #3419ab33;
+}
+.fs-10{
+    font-size: 10px;
+}
