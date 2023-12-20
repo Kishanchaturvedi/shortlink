@@ -72,7 +72,7 @@ function showText() {
 
 
 
-document.getElementById("sideBtn").addEventListener("click", function() {
+document.getElementById("sideBtn").addEventListener("click", function () {
     var sideNav = document.getElementById("sideNav");
     var sideSpace = document.getElementById("sideSpace");
     var elementsToToggle = document.querySelectorAll(".toggle-display");
@@ -82,8 +82,47 @@ document.getElementById("sideBtn").addEventListener("click", function() {
     sideSpace.classList.toggle("pl-16rem");
     sideSpace.classList.toggle("pl-5rem");
 
-    elementsToToggle.forEach(function(element) {
+    elementsToToggle.forEach(function (element) {
         element.classList.toggle("d-block");
         element.classList.toggle("d-none");
+    });
+});
+
+// Get all elements with the class name 'copy'
+const copyButtons = document.querySelectorAll('.copy');
+
+// Iterate through each 'copy' button
+copyButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        // Find the corresponding 'linkCopy' element for the clicked button
+        const linkCopyElements = document.querySelectorAll('.linkCopy');
+        const textToCopy = linkCopyElements[index].textContent;
+
+        // Create a temporary textarea element to copy the text
+        const textArea = document.createElement('textarea');
+        textArea.value = textToCopy;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert('Text copied to clipboard');
+    });
+});
+
+
+//  delete div ******************************
+// Get all elements with the class name 'delete'
+const deleteButtons = document.querySelectorAll('.delete');
+
+// Iterate through each 'delete' button
+deleteButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        // Find the parent element of the clicked button (the createLink div)
+        const createLinkDiv = event.target.closest('.createLink');
+
+        // Check if the createLinkDiv exists before attempting to delete
+        if (createLinkDiv) {
+            createLinkDiv.remove(); // Remove the entire createLink div
+        }
     });
 });

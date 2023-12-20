@@ -18,7 +18,17 @@
 .bg-blue {
     background-color: #3419AB;
 }
-
+.btn-outline-blue{
+    border: 2px solid #3419AB;
+    color: #3419AB;
+    background: transparent;
+    transition: .5s;
+}
+.btn-outline-blue:hover{
+    border: 2px solid #3419AB;
+    color: white;
+    background: #3419AB;
+}
 .bg-orange {
     background: #DB4437;
 }
