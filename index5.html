@@ -23,7 +23,38 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/theme.css">
     <style>
-       
+        .toolcopy .toolcopytext {
+            visibility: hidden;
+            width: 140px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .toolcopy .toolcopytext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .toolcopy:hover .toolcopytext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -35,8 +66,6 @@
             <h2 class=" text-blue ">Logo</h2>
         </a>
         <div class="d-lg-flex align-items-center gap-5 d-none">
-            <!-- <button class="text-capitalize px-4 py-2 btn-overlay rounded">upgrade</button> -->
-            <!-- <button class="text-capitalize px-4 py-2 btn-overlay rounded">upgrade</button> -->
             <li class="nav-link"><a href="login.html" class="nav-link text-uppercase">New link</a></li>
             <li class="nav-link"><a href="login.html" class="nav-link text-uppercase"><span
                         class="text-uppercase">qr</span> code</a></li>
@@ -51,61 +80,17 @@
                     </li>
                     <li class="nav-link text-capitalize py-1 ps-2"><a href="#" class="nav-link"> subscription</a></li>
                     <li class="nav-link text-capitalize py-1 ps-2"><a href="#" class="nav-link"> payment method</a></li>
-                    <li class="nav-link text-capitalize py-1 ps-2"><a href="#" class="nav-link"> request support</a></li>
+                    <li class="nav-link text-capitalize py-1 ps-2"><a href="#" class="nav-link"> request support</a>
+                    </li>
                     <li class="nav-link text-capitalize py-1 ps-2"><a href="#" class="nav-link"> sign out</a></li>
                 </div>
             </div>
         </div>
         <button class="d-lg-none d-block"><i class="bi bi-list"></i></button>
-      
+
     </nav>
-    <!-- <div class="d-flex"> -->
-    <div class="position-relative">
-        <div class="d-flex flex-column gap-4  sidenav-bar position-fixed bg-white shadow-sm pt-4 mt-3 h-100"
-            id="sideNav">
-            <button class=" position-absolute btn-circle" id="sideBtn" onclick="sideBtn()"><i
-                    class="bi bi-chevron-right text-blue fw-bold fs-5"></i></button>
-            <!-- <li class="nav-link">
-                <a href="" class="text-capitalize nav-link d-flex align-items-center fs-1 ps-5">logo</a>
-            </li> -->
-            <li class="nav-link">
-                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon"><i
-                            class="bi bi-grid fs-4 p-4"></i></span><span class="toggle-display">dashbord</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="index2.html" class="text-capitalize nav-link d-flex align-items-center"><span
-                        class="side-icon"><i class="bi bi-link fs-4 p-4"></i></span><span class="toggle-display">new
-                        link</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="index3.html" class="text-capitalize nav-link d-flex align-items-center"><span
-                        class="side-icon"><i class="bi bi-qr-code fs-4 p-4"></i></span><span class="toggle-display">qr
-                        code</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon "><i
-                            class="bi bi-table fs-4 p-4"></i></span><span class="toggle-display">table</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon"><i
-                            class="bi bi-calendar2-plus fs-4 p-4"></i></span><span
-                        class="toggle-display">calender</span>
-                </a>
-            </li>
-            <li class="nav-link">
-                <a href="" class="text-capitalize nav-link d-flex align-items-center"><span class="side-icon"><i
-                            class="bi bi-geo-alt fs-4 p-4"></i></span><span class="toggle-display">maps</span>
-                </a>
-            </li>
-        </div>
-    </div>
+    
     <div class="pl-16rem pt-5 mt-5 " id="sideSpace">
-
-
         <div class="container-fluid d-lg-flex justify-content-center align-items-center flex-column gap-2">
             <div
                 class="col-lg-10 px-lg-5 px-2 py-5 rounded-lg-5 rounded-4 bg-white h-100 d-flex justify-content-between align-items-center createLink">

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashborad</title>
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- icon link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Poppins fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+
+
+<body class="bg-darkBlue">
+
+
+    <header>
+        <nav class="border-bottom py-2 position-relativ">
+            <div class="container-lg d-flex justify-content-between align-items-center">
+                <a href="" class="text-light nav-link fs-3">logo</a>
+                <div class="d-xl-flex d-none gap-4 align-items-center ">
+                    <a href="" class="text-light nav-link fs-6 textHover ">Links</a>
+                    <a href="" class="text-light nav-link fs-6 textHover ">Reports</a>
+                    <a href="" class="text-light nav-link fs-6 textHover ">Workspaces</a>
+                    <a href="" class="text-light nav-link fs-6 textHover ">Domains</a>
+                    <a href="" class="text-light nav-link fs-6 textHover ">LinkGallery</a>
+                    <a href="" class="text-light nav-link fs-6 textHover ">Marketplace</a>
+                    <a href="" class="text-light nav-link fs-6 textHover ">Premium features</a>
+                </div>
+                <div class="d-flex gap-4 align-items-center">
+                    <button class="text-capitalize px-2 py-1 upgrade-btn rounded d-xl-block d-none">upgrade</button>
+                    <a href="" class="text-light nav-link fs-6 textHover "><i class="bi bi-exclamation-circle"></i></a>
+                    <a href="" class="text-light nav-link fs-6 textHover "><i class="bi bi-bell-fill"></i></a>
+                    <li class="nav-link profile"><img src="/img/profiles.png" alt="" class="img-cover rounded-circle">
+                    </li>
+                    <button class="bg-transparent border-0 text-light fs-3 d-xl-none d-block textHover" id="openNav"
+                        onclick="openNav()"><i class="bi bi-list"></i></button>
+                </div>
+
+            </div>
+
+            <div class="position-absolute top-0 bottom-0 start-0 end-0 bg-darkBlue px-3 py-3 d-none" id="mobileNav">
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-3">
+                    <a href="" class="text-light nav-link fs-3">logo</a>
+                    <button class="border-0 bg-transparent fs-3 text-light textHover" id="closeNav"
+                        onclick="closeNav()"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="d-flex flex-column gap-3 mt-4">
+                    <a href="" class="text-light nav-link fs-5 textHover">Links</a>
+                    <a href="" class="text-light nav-link fs-5 textHover">Reports</a>
+                    <a href="" class="text-light nav-link fs-5 textHover">Workspaces</a>
+                    <a href="" class="text-light nav-link fs-5 textHover">Domains</a>
+                    <a href="" class="text-light nav-link fs-5 textHover">LinkGallery</a>
+                    <a href="" class="text-light nav-link fs-5 textHover">Marketplace</a>
+                    <a href="" class="text-light nav-link fs-5 textHover">Premium features</a>
+                </div>
+
+            </div>
+
+
+        </nav>
+        <div class="border-bottom">
+            <div class="container-lg d-flex justify-content-between align-items-center py-4">
+                <div class="d-flex gap-4">
+                    <li class="text-capitalize nav-link fs-4 border-end pe-4 text-light"><span class="">2</span> link
+                    </li>
+                    <select class="bg-transparent text-light px-1" id="inputGroupSelect0">
+                        <option class="text-light bg-darkBlue" selected>latest</option>
+                        <option class="text-light bg-darkBlue" value="1">oldest</option>
+                        <option class="text-light bg-darkBlue" value="2">Slashtag A-Z</option>
+                        <option class="text-light bg-darkBlue" value="3">Slashtag Z-A</option>
+                    </select>
+                </div>
+                <button class="rounded border-0 bg-blue text-light py-1 px-3 text-capitalize">new link</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="">
+        <div class="d-flex flex-column">
+            <div class="blue-hover">
+                <div class="container-lg py-5 d-flex justify-content-between align-items-center createLink">
+                    <div class=" text-light ">
+                        <span class="icon">
+                            <i class="bi bi-youtube text-danger"></i>
+                        </span>
+                        <span class="linkCopy">https://whizzact.com/#/</span>
+                    </div>
+                    <p class="m-0 text-12 text-light text-capitalize">1 minute ago</p>
+                    <div class="icons d-flex gap-3">
+                        <div class="position-relative d-flex justify-content-center toolcopy">
+                            <button class="border-0 bg-transparent text-light copy" onclick="changeText(this)"
+                                onmouseout="resetText(this)">
+                                <i class="bi bi-copy"></i>
+                            </button>
+                            <span class="position-absolute toolcopytext text-capitalize">Copy Link</span>
+                        </div>
+
+                        <div class="position-relative toolcopy">
+                            <button class="border-0 bg-transparent text-light qr" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="bi bi-qr-code"></i></button>
+                            <span class="position-absolute toolcopytext text-capitalize">QR Code</span>
+                        </div>
+
+
+                        <div class="position-relative toolcopy">
+                            <button class="border-0 bg-transparent text-light copy"><i
+                                    class="bi bi-share-fill"></i></button>
+                            <span class="position-absolute toolcopytext text-capitalize">Share</span>
+                        </div>
+
+                        <div class="position-relative toolcopy">
+                            <button class="border-0 bg-transparent text-light edit"><i
+                                    class="bi bi-pencil-fill"></i></button>
+                            <span class="position-absolute toolcopytext text-capitalize">Edit</span>
+                        </div>
+                        <div class="position-relative toolcopy">
+                            <button class="border-0 bg-transparent text-light delete"><i
+                                    class="bi bi-trash3-fill"></i></button>
+                            <span class="position-absolute toolcopytext text-capitalize">Delete</span>
+                        </div>
+                    </div>
+
+                    <!--QR Modal -->
+                    <!-- <div class="d-fle justify-content-center align-items-center"> -->
+                        <div class="col-6  modal-qr position-absolute text-light">
+                            fldsdjfkfjdkfjkfmdfmdkfmsdfmsdfksmdksmkm lorem1000
+                        </div>
+                    <!-- </div>   -->
+                </div>
+            </div>
+
+
+
+            <div class="blue-hover">
+                <div class="container-lg py-5 d-flex justify-content-between align-items-center createLink">
+                    <div class=" text-light ">
+                        <span class="icon">
+                            <i class="bi bi-youtube text-danger"></i>
+                        </span>
+                        <span class="linkCopy">text.com</span>
+                    </div>
+                    <p class="m-0 text-12 text-light text-capitalize">1 minute ago</p>
+                    <div class="icons d-flex gap-3">
+                        <div class="position-relative d-flex justify-content-center toolcopy">
+                            <button class="border-0 bg-transparent text-light copy" onclick="changeText(this)"
+                                onmouseout="resetText(this)">
+                                <i class="bi bi-copy"></i>
+                            </button>
+                            <span class="position-absolute toolcopytext text-capitalize">Copy Link</span>
+                        </div>
+
+                        <div class="position-relative toolcopy">
+                            <button class="border-0 bg-transparent text-light qr"><i class="bi bi-qr-code"></i></button>
+                            <span class="position-absolute toolcopytext text-capitalize">QR Code</span>
+                        </div>
+
+
+                        <div class="position-relative toolcopy">
+                            <button class="border-0 bg-transparent text-light copy"><i
+                                    class="bi bi-share-fill"></i></button>
+                            <span class="position-absolute toolcopytext text-capitalize">Share</span>
+                        </div>
+
+                        <div class="position-relative toolcopy">
+                            <button class="border-0 bg-transparent text-light edit"><i
+                                    class="bi bi-pencil-fill"></i></button>
+                            <span class="position-absolute toolcopytext text-capitalize">Edit</span>
+                        </div>
+                        <div class="position-relative toolcopy">
+                            <button class="border-0 bg-transparent text-light delete"><i
+                                    class="bi bi-trash3-fill"></i></button>
+                            <span class="position-absolute toolcopytext text-capitalize">Delete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="toolcopy mt-5">
+                <button class="toolbtn bg-light-gray" onclick="myFunction()" onmouseout="outFunc()">
+                    <span class="toolcopytext" id="myToolcopy">Copy to clipboard</span>
+                    <i class="bi bi-copy"></i>
+                </button>
+            </div> -->
+        </div>
+
+
+    </main>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mobileNav").classList.remove("d-none");
+            document.getElementById("mobileNav").classList.add("d-block");
+        }
+        function closeNav() {
+            document.getElementById("mobileNav").classList.remove("d-block");
+            document.getElementById("mobileNav").classList.add("d-none");
+        }
+
+        //  delete div ******************************
+        // Get all elements with the class name 'delete'
+        const deleteButtons = document.querySelectorAll('.delete');
+
+        // Iterate through each 'delete' button
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                // Find the parent element of the clicked button (the createLink div)
+                const createLinkDiv = event.target.closest('.createLink');
+
+                // Check if the createLinkDiv exists before attempting to delete
+                if (createLinkDiv) {
+                    createLinkDiv.remove(); // Remove the entire createLink div
+                }
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const copyButtons = document.querySelectorAll('.copy');
+
+            copyButtons.forEach(copyButton => {
+                copyButton.addEventListener('click', (event) => {
+                    const parentDiv = event.target.closest('.createLink');
+                    const linkCopy = parentDiv.querySelector('.linkCopy');
+
+                    // Create a temporary textarea element
+                    const textArea = document.createElement('textarea');
+                    textArea.value = linkCopy.textContent;
+                    document.body.appendChild(textArea);
+
+                    // Select and copy the text
+                    textArea.select();
+                    document.execCommand('copy');
+
+                    // Remove the temporary textarea
+                    document.body.removeChild(textArea);
+
+                    // alert('Text copied to clipboard');
+                });
+            });
+        });
+
+
+
+        function shareOn(platform) {
+            var linkToShare = 'https://your-share-link.com'; // Replace this with your actual share link
+
+            switch (platform) {
+                case 'facebook':
+                    openShareWindow(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(linkToShare)}`);
+                    break;
+                case 'twitter':
+                    openShareWindow(`https://twitter.com/intent/tweet?url=${encodeURIComponent(linkToShare)}`);
+                    break;
+                case 'linkedin':
+                    openShareWindow(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(linkToShare)}`);
+                    break;
+
+                // Add cases for other social media platforms as needed
+                default:
+                    break;
+            }
+        }
+
+        function openShareWindow(url) {
+            window.open(url, '_blank', 'width=600,height=400');
+        }
+
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+    <script src="js/js.js"></script>
+    <script src="/js/validation.js"></script>
+
+
+
+</body>
+
+</html>

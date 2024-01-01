@@ -71,6 +71,43 @@ function showText() {
 // }
 
 
+// var originalText = "copy link"; // Store the original text
+// var newText = "copied"; // Replace this with the new text you want
+
+// function changeText() {
+//     var spanElement = document.querySelectorAll('.toolcopytext');
+//     if (spanElement) {
+//         spanElement.textContent = newText;
+//     }
+// }
+
+// function resetText() {
+//     var spanElement = document.querySelectorAll('.toolcopytext');
+//     if (spanElement) {
+//         spanElement.textContent = originalText; // Revert to the original text
+//     }
+// }
+
+
+function changeText(button) {
+    var spanElement = button.nextElementSibling;
+    if (spanElement) {
+        spanElement.dataset.originalText = spanElement.textContent; // Store the original text
+        spanElement.textContent = "Link Copied!";
+    }
+}
+
+function resetText(button) {
+    var spanElement = button.nextElementSibling;
+    if (spanElement && spanElement.dataset.originalText) {
+        spanElement.textContent = spanElement.dataset.originalText; // Revert to the original text
+        spanElement.removeAttribute('data-original-text'); // Remove the stored original text
+    }
+}
+
+
+
+
 
 document.getElementById("sideBtn").addEventListener("click", function () {
     var sideNav = document.getElementById("sideNav");
@@ -88,41 +125,46 @@ document.getElementById("sideBtn").addEventListener("click", function () {
     });
 });
 
-// Get all elements with the class name 'copy'
-const copyButtons = document.querySelectorAll('.copy');
+// // Get all elements with the class name 'copy'
+// const copyButtons = document.querySelectorAll('.copy');
 
-// Iterate through each 'copy' button
-copyButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        // Find the corresponding 'linkCopy' element for the clicked button
-        const linkCopyElements = document.querySelectorAll('.linkCopy');
-        const textToCopy = linkCopyElements[index].textContent;
+// // Iterate through each 'copy' button
+// copyButtons.forEach((button, index) => {
+//     button.addEventListener('click', () => {
+//         // Find the corresponding 'linkCopy' element for the clicked button
+//         const linkCopyElements = document.querySelectorAll('.linkCopy');
+//         const textToCopy = linkCopyElements[index].textContent;
 
-        // Create a temporary textarea element to copy the text
-        const textArea = document.createElement('textarea');
-        textArea.value = textToCopy;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        alert('Text copied to clipboard');
-    });
-});
+//         // Create a temporary textarea element to copy the text
+//         const textArea = document.createElement('textarea');
+//         textArea.value = textToCopy;
+//         document.body.appendChild(textArea);
+//         textArea.select();
+//         document.execCommand('copy');
+//         document.body.removeChild(textArea);
+//         alert('Text copied to clipboard');
+//     });  
+// });
 
 
-//  delete div ******************************
-// Get all elements with the class name 'delete'
-const deleteButtons = document.querySelectorAll('.delete');
+// document.addEventListener("DOMContentLoaded", function () {
+//     const copyButton = document.querySelector('#exampleModal2 .copy');
+//     const linkCopy = document.querySelector('#exampleModal2 .linkCopy');
 
-// Iterate through each 'delete' button
-deleteButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        // Find the parent element of the clicked button (the createLink div)
-        const createLinkDiv = event.target.closest('.createLink');
+//     copyButton.addEventListener('click', () => {
+//         const textToCopy = linkCopy.textContent;
 
-        // Check if the createLinkDiv exists before attempting to delete
-        if (createLinkDiv) {
-            createLinkDiv.remove(); // Remove the entire createLink div
-        }
-    });
-});
+//         const textArea = document.createElement('textarea');
+//         textArea.value = textToCopy;
+//         document.body.appendChild(textArea);
+//         textArea.select();
+//         document.execCommand('copy');
+//         document.body.removeChild(textArea);
+
+//         alert('Text copied to clipboard');
+//     });
+// });
+
+
+
+

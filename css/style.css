@@ -17,7 +17,7 @@
     transition: .6s;
 }
 
-.faviconLogo{
+.faviconLogo {
     cursor: pointer;
 }
 
@@ -57,52 +57,228 @@ button .nav-link:focus {
     border: 1px dashed #3419AB;
     height: 70px;
 }
-/* .pl-16px{
-    padding-left: 16rem;
-} */
 
-.rotate{
+.pl-16px {
+    padding-left: 16rem;
+}
+
+.rotate {
     transform: rotate(180deg);
 }
 
 /* dashbord  */
 .sidenav-bar {
-    width: 16rem ;
+    width: 16rem;
     transition: .5s;
     margin-top: 20px;
     /* height: 100vh; */
 }
+
 /* .w-16{
     width: 16rem;
 } */
-.phoneSide-bar{
+.phoneSide-bar {
     width: 5rem;
     transition: .5s;
 }
-.transition-5{
+
+.transition-5 {
+    transition: .5s;
+}
+
+.pl-5rem {
+    padding-left: 5rem;
     transition: .5s;
 }
 
 .pl-16rem {
     padding-left: 16rem;
-    transition: .5s;
 }
-.pl-5rem {
-    padding-left: 5rem;
-    transition: .5s;
-}
+
 .btn-circle {
     height: 35px;
-    width: 35px;border-radius: 100%;
+    width: 35px;
+    border-radius: 100%;
     border: none;
     right: -15px;
 }
+
+
+/* .linkUrl{
+
+} */
+.profile-list {
+    background: white;
+    width: 180px;
+    right: -15px;
+    /* height: ; */
+    display: none;
+}
+
+.profile-list li {
+    color: black;
+}
+
+.profile-dropdown:hover.profile-list {
+    display: block;
+}
+
+
+.modal-qr{
+    height: 10rem;
+    /* width: 15rem; */
+    background: rgb(29, 33, 67);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .toggle-display{
 
 } */
 
+/* tooltips ************************ */
+
+/* .tooltips{
+    top: -2rem;
+} */
+
+/* .toolcopy .toolcopytext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.toolcopy .toolcopytext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.toolcopy:hover .toolcopytext {
+    visibility: visible;
+    opacity: 1;
+} */
+
+
+
+/* fenal page  */
+.bg-darkBlue {
+    background: #0e0e25;
+}
+
+.profile {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+
+#inputGroupSelect01 option {
+    background: transparent;
+}
+
+.toolcopy .toolcopytext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.toolcopy .toolcopytext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.toolcopy:hover .toolcopytext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.blue-hover:hover {
+    background: #3419AB;
+    transition: .7s;
+}
+
+.icons {
+    display: none !important;
+}
+
+/* .d-none{
+    transition: .7s;
+}
+.d-block{
+    transition: .7s;
+} */
+.blue-hover:hover .icons {
+    display: flex !important;
+}
+
+.upgrade-btn {
+    border: 2px solid #3419AB;
+    color: #3419AB;
+    background: transparent;
+    transition: ease-in .5s;
+}
+
+.upgrade-btn:hover {
+    border: 2px solid #3419AB;
+    color: #fff;
+    background: #3419AB;
+}
+
+.textHover:hover {
+    color: #3419AB !important;
+    transition: .5s;
+}
+
+
+
 /* // `md` applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
     /* .w-16{
         width: 5rem;
     }
@@ -112,4 +288,4 @@ button .nav-link:focus {
     .toggle-display{
         display: none;
     } */
- }
+}
